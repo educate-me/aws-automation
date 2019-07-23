@@ -38,7 +38,7 @@ You can provide your credentials via the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACC
 Change directory to terraform environment root.
 
 ```bash
-> cd terraform/environments/dev-env
+> cd terraform/aws-networking/environments/dev-env
 ```
 
 ### Initialize
@@ -74,7 +74,7 @@ commands will detect it and remind you to do so if necessary.
 
 ```
 
-### Dry Run
+### Dry Run [ Sample ]
 
 The `terraform plan` command is used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files.
 
