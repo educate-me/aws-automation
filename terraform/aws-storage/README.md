@@ -38,7 +38,7 @@ You can provide your credentials via the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACC
 Change directory to terraform environment root.
 
 ```bash
-> cd terraform/aws-networking/environments/dev-env
+> cd terraform/aws-storage/environments/dev-env
 ```
 
 ### Initialize
@@ -101,33 +101,8 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # module.s3.aws_s3_bucket.b will be created
-  + resource "aws_s3_bucket" "b" {
-      + acceleration_status         = (known after apply)
-      + acl                         = "private"
-      + arn                         = (known after apply)
-      + bucket                      = "edume-my-tf-test-bucket"
-      + bucket_domain_name          = (known after apply)
-      + bucket_regional_domain_name = (known after apply)
-      + force_destroy               = false
-      + hosted_zone_id              = (known after apply)
-      + id                          = (known after apply)
-      + region                      = (known after apply)
-      + request_payer               = (known after apply)
-      + tags                        = {
-          + "Environment" = "Dev"
-          + "Name"        = "My bucket"
-        }
-      + website_domain              = (known after apply)
-      + website_endpoint            = (known after apply)
 
-      + versioning {
-          + enabled    = (known after apply)
-          + mfa_delete = (known after apply)
-        }
-    }
-
-Plan: 1 to add, 0 to change, 0 to destroy.
+Plan: x to add, 0 to change, 0 to destroy.
 
 ------------------------------------------------------------------------
 
@@ -150,33 +125,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # module.s3.aws_s3_bucket.b will be created
-  + resource "aws_s3_bucket" "b" {
-      + acceleration_status         = (known after apply)
-      + acl                         = "private"
-      + arn                         = (known after apply)
-      + bucket                      = "edume-my-tf-test-bucket"
-      + bucket_domain_name          = (known after apply)
-      + bucket_regional_domain_name = (known after apply)
-      + force_destroy               = false
-      + hosted_zone_id              = (known after apply)
-      + id                          = (known after apply)
-      + region                      = (known after apply)
-      + request_payer               = (known after apply)
-      + tags                        = {
-          + "Environment" = "Dev"
-          + "Name"        = "My bucket"
-        }
-      + website_domain              = (known after apply)
-      + website_endpoint            = (known after apply)
-
-      + versioning {
-          + enabled    = (known after apply)
-          + mfa_delete = (known after apply)
-        }
-    }
-
-Plan: 1 to add, 0 to change, 0 to destroy.
+Plan: x to add, 0 to change, 0 to destroy.
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -189,7 +138,7 @@ module.s3.aws_s3_bucket.b: Still creating... [10s elapsed]
 module.s3.aws_s3_bucket.b: Still creating... [20s elapsed]
 module.s3.aws_s3_bucket.b: Creation complete after 26s [id=edume-my-tf-test-bucket]
 
-Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+Apply complete! Resources: x added, 0 changed, 0 destroyed.
 
 ```
 
@@ -207,30 +156,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # module.s3.aws_s3_bucket.b will be destroyed
-  - resource "aws_s3_bucket" "b" {
-      - acl                         = "private" -> null
-      - arn                         = "arn:aws:s3:::edume-my-tf-test-bucket" -> null
-      - bucket                      = "edume-my-tf-test-bucket" -> null
-      - bucket_domain_name          = "edume-my-tf-test-bucket.s3.amazonaws.com" -> null
-      - bucket_regional_domain_name = "edume-my-tf-test-bucket.s3.us-west-1.amazonaws.com" -> null
-      - force_destroy               = false -> null
-      - hosted_zone_id              = "Z2F56UZL2M1ACD" -> null
-      - id                          = "edume-my-tf-test-bucket" -> null
-      - region                      = "us-west-1" -> null
-      - request_payer               = "BucketOwner" -> null
-      - tags                        = {
-          - "Environment" = "Dev"
-          - "Name"        = "My bucket"
-        } -> null
-
-      - versioning {
-          - enabled    = false -> null
-          - mfa_delete = false -> null
-        }
-    }
-
-Plan: 0 to add, 0 to change, 1 to destroy.
+Plan: 0 to add, 0 to change, x to destroy.
 
 Do you really want to destroy all resources?
   Terraform will destroy all your managed infrastructure, as shown above.
